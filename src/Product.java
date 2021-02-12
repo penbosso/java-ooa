@@ -1,6 +1,17 @@
 public abstract class Product implements ProductPricingService{
 
     private String productId;
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    private double value;
+
     Product(String productId) {
         this.productId = productId;
     }

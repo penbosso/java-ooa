@@ -70,6 +70,6 @@ public class TradedProducts implements MontrealTradedProducts{
      */
     @Override
     public double totalValueOfDaysTradedProducts() {
-        return 0;
+        return (int) this.productList.stream().mapToDouble(product -> productTradeMap.get(product) * product.getValue()).sum();
     }
 }
